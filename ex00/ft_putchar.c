@@ -9,13 +9,15 @@
 /*   Updated: 2023/02/14 17:22:58 by amarin-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include<unistd.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-/*
+
 int	main()
 {
-	ft_putchar('o');
+	ft_putchar(A);
 	return (0);
-}*/
+}
