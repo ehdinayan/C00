@@ -1,4 +1,4 @@
-# ft_putnbr
+# ft_putnbr.c
 
 ## Escribe una función que muestre el número que se ha usado como parámetro. La función deberá ser capaz de mostrar todos los valores posibles en una variable de tipo int.
 
@@ -35,6 +35,8 @@ void ft_putnbr(int nb)
 ```
 Hay un asunto que aclarar y se trata de los valores mínimo y máximo para una variable de tipo int.
 
+Por otro lado, esta versión la he implementado ahora estudiando y es distinta de la que presenté en su momento en la piscina para evaluar, ya que no la tengo. Lo importante es comprenderlo y saberlo hacer.
+
 el mínimo es -2147483648 y el máx 2147483647.
 
 Cuando se pasa un núm negativo como parámetro que no es el valor mínimo, la función escribe el signo menos delante del número en la salida, pero le cambia el signo para trabajar con el valor positivo internamente.
@@ -48,6 +50,6 @@ Este proceso se irá repitiendo con todos los valores almacenados en las anterio
 
 Cuando todos los valores de nb guardados por recursividad han sido escritos, la función termina de ejecutarse.
 
-En el caso de que se pase como parámetro el valor mínimo, entonces al intentar cambiar el signo habría un desbordamiento de enteros, ya que el valor resultante sería superior al valor positivo posible para amacenar en una variable tipo int. Por ese motivo hay una condición explícita para devolver el numero completo como string usando write y sin tener que hacer ninguna operación.
+En el caso de que se pase como parámetro el valor mínimo, entonces al intentar cambiar el signo habría un desbordamiento de enteros, ya que el valor resultante sería superior al valor positivo posible para almacenar en una variable tipo int. Por ese motivo hay una condición explícita para devolver el numero completo como string usando write y sin tener que hacer ninguna operación.
 
 Por último, se implementa el fichero stdlib.h para poder hacer uso del comando exit (0) después de devolver el valor mínimo.
